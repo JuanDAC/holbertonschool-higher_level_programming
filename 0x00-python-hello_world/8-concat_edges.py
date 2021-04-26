@@ -2,5 +2,4 @@
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
 # YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-print("%s%s%s" % (str[39:67], str[107:112], str[0:6]))
-
+print("%s%s%s" % (str[39:66], str[106:112], str[0:6]))
