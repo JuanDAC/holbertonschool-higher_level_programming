@@ -2,7 +2,11 @@
 import random
 number = random.randint(-10000, 10000)
 # YOUR CODE HERE
-last_digit = (number % 10 if number >= 0 else ((number * -1) % 10) * -1)
+if number >= 0:
+    last_digit = number % 10
+else:
+    last_digit = ((number * -1) % 10) * -1
+
 message = "Last digit %d of %d and is" % (number, last_digit)
 
 if last_digit > 5:
