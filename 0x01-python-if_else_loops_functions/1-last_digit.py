@@ -9,9 +9,9 @@ else:
 
 message = "Last digit %d of %d and is" % (number, last_digit)
 
-if last_digit > 5:
-    print(message, "greater than 5")
-elif last_digit == 0:
+if last_digit == 0:
     print(message, "0")
+elif last_digit > 5:
+    print(message, "greater than 5")
 else:
     print(message, "less than 6 and not 0")
