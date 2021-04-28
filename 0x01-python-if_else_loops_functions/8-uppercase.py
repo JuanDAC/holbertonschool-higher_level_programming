@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-def islower(c):
-    if ord(c) >= 97 and ord(c) <= 122:
-        return (True)
-    return (False)
+#!/usr/bin/python3
+uper = lambda x: x + 1
+def uppercase(str):
+    print("{:s}".format("".join(str.split()))
