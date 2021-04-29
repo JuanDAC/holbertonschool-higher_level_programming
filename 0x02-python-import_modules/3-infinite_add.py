@@ -5,5 +5,5 @@ if __name__ == "__main__":
     first = 0
     sys.argv.pop(first)
     for current_number_string in sys.argv:
-            value = value + int(current_number_string)
+        value = value + int(current_number_string)
     print("{:d}".format(value))
