@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 def handler_error(number_one, number_two):
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
@@ -16,7 +18,7 @@ if __name__ == "__main__":
         exit(1)
         quit()
 
-    argv = sys.argv;
+    argv = sys.argv
     number_one = int(argv.pop(first))
     operation = argv.pop(first)
     number_two = int(argv.pop(first))
@@ -32,4 +34,3 @@ if __name__ == "__main__":
     handler_operation = operations.get(operation, handler_error)
     resolve = handler_operation(number_one, number_two)
     print("%d %s %d = %d" % (number_one, str(operation), number_two, resolve))
-
