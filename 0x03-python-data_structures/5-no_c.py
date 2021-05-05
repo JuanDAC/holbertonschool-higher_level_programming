@@ -2,8 +2,6 @@
 
 
 def no_c(my_string):
-    if not my_string:
-        return ""
 
     new_string = ""
     length = len(my_string)
