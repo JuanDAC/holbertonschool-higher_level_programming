@@ -5,6 +5,6 @@ def print_list_integer(my_list=[]):
     length = len(my_list)
     for i in range(length):
         print(
-            "{}".format(my_list[i]),
+                "{:d}".format(my_list[i]),
             end=('\n' if length != (i + 1) else '')
         )
