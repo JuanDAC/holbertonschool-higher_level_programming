@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
     init = 0
 
     for i in range(init, height):
-        width = len(matrix[i]);
+        width = len(matrix[i])
         if not width:
             print("")
         for j in range(init, width):
