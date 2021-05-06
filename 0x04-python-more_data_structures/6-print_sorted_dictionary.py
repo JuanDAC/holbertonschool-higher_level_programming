@@ -3,7 +3,7 @@
 
 def my_format(a_dictionary):
     def warp(key):
-        print("{:s}: {}".format(key, a_dictionary[key]))
+        print("{:s}:".format(key), a_dictionary[key])
     return warp
 
 
