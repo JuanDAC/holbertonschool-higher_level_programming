@@ -8,8 +8,8 @@ print("Length: {:d} - First character: {}".format(length, first))
 sentence = ""
 length, first = multiple_returns(sentence)
 print("Length: {:d} - First character: {}".format(length, first))
-
+"""
 sentence = None
 length, first = multiple_returns(sentence)
 print("Length: {:d} - First character: {}".format(length, first))
-
+"""
