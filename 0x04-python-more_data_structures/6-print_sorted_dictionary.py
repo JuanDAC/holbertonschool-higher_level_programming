@@ -8,4 +8,6 @@ def my_format(a_dictionary):
 
 
 def print_sorted_dictionary(a_dictionary):
+    if not a_dictionary:
+        return
     return map(my_format(a_dictionary), sorted(a_dictionary))
