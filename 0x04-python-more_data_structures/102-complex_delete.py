@@ -10,6 +10,6 @@ def complex_delete(a_dictionary, value):
 
     for item in a_dictionary.items():
         if value == item[val]:
-            del item[key]
+            item.pop(key)
 
     return a_dictionary
