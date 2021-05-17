@@ -13,5 +13,5 @@ def safe_print_list(my_list=[], x=0):
     try:
         i += 1
     except UnboundLocalError:
-        i = 0;
-    return i;
+        i = 0
+    return i
