@@ -43,14 +43,14 @@ class Square:
 
     def my_print(self):
         """my_print that prints in stdout the square with the character #"""
+        if not self.size:
+            print()
         print(self)
 
     def __str__(self):
         """__string__ that prints in stdout the square with the character #"""
         string = ""
         size = self.size
-        if not self.size:
-            string += "\n"
         if size:
             string += (self.position[1] * "\n")
         for i in range(size):
