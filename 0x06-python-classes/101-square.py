@@ -53,8 +53,9 @@ class Square:
             string += "\n"
         if size:
             string += (self.position[1] * "\n")
-        for _ in range(size):
-            string += (self.position[0] * " " + size * "#") + "\n"
+        for i in range(size):
+            newline = "\n" if (size - 1 != i) else ""
+            string += (self.position[0] * " " + size * "#") + newline
         return string
 
 
