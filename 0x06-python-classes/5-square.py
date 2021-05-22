@@ -6,7 +6,7 @@
 class Square:
     """Class docstrings go here."""
 
-    def __init__(self, size = 0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """__init__ constructor method."""
         self.size = size
         self.position = position
