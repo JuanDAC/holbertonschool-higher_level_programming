@@ -72,8 +72,8 @@ class SinglyLinkedList:
     def __str__(self):
         string = ""
         current_node = self.__head
-        while current_node is None:
-            new_line = "\n" if current_node.next_node is None else ""
+        while current_node is not None:
+            new_line = "\n" if current_node.next_node is not None else ""
             string += "%d%s" % (current_node.data, new_line)
             current_node = current_node.next_node
         return string
