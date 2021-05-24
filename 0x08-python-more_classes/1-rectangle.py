@@ -12,20 +12,6 @@ class Rectangle:
         self.height = height
 
     @property
-    def heigth(self):
-        """height class used to represent an Animal"""
-        return self.__heigth
-
-    @heigth.setter
-    def height(self, value):
-        """height class used to represent an Animal"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise TypeError("height must be >= 0")
-        self.__height = value
-
-    @property
     def width(self):
         """width class used to represent an Animal"""
         return self.__width
@@ -33,11 +19,27 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """width class used to represent an Animal"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise TypeError("width must be >= 0")
-        self.__width = value
+        else:
+            self.__width = value
+
+    @property
+    def heigth(self):
+        """height class used to represent an Animal"""
+        return self.__heigth
+
+    @heigth.setter
+    def height(self, value):
+        """height class used to represent an Animal"""
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise TypeError("height must be >= 0")
+        else:
+            self.__height = value
 
 
 if __name__ == "__main__":
