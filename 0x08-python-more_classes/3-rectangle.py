@@ -2,6 +2,7 @@
 
 """A class used to represent an Animal"""
 
+
 class Rectangle:
     """A class used to represent an Animal"""
 
@@ -47,9 +48,11 @@ class Rectangle:
     def __string__(self):
         return [print(self.width * "#") for _ in self.heigth]
 
+
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {} - Perimeter: {}".format(
+        my_rectangle.area(), my_rectangle.perimeter()))
 
     print(str(my_rectangle))
     print(repr(my_rectangle))

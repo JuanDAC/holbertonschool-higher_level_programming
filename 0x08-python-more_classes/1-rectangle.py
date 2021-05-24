@@ -2,6 +2,7 @@
 
 """A class used to represent an Animal"""
 
+
 class Rectangle:
     """A class used to represent an Animal"""
 
@@ -37,6 +38,7 @@ class Rectangle:
         if value < 0:
             raise TypeError("height must be >= 0")
         self.__height = value
+
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
