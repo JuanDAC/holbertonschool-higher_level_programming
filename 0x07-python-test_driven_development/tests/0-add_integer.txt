@@ -1,0 +1,141 @@
+===============================
+ How to Use 0-add_integer.py
+===============================
+
+
+Using `add_integer(:int, :int)`
+
+	>>> import os
+
+	>>> name_file = '0-add_integer.py'
+
+	>>> os.access('README.md', os.F_OK)
+	True
+
+	>>> os.access(name_file, os.F_OK)
+	True
+
+	>>> module = name_file[:-3]
+	>>> add_integer = __import__(module).add_integer
+
+	>>> os.popen("pep8 0-add_integer.py").read()
+	''
+
+	>>> len('0-add_integer'.__doc__) > 10
+	True
+
+	>>> len(add_integer.__doc__) > 10
+	True
+
+	>>> os.popen('cat -e 0-add_integer.py | tail -1').read()[-1]
+	'\n'
+
+	>>> os.popen('cat 0-add_integer.py | head -1').read()
+	'#!/usr/bin/python3\n'
+
+	>>> add_integer(1, 2)
+	3
+
+	>>> add_integer(100, -2)
+	98
+
+	>>> add_integer(-8)
+	90
+
+	>>> add_integer(42.5, -2)
+	40
+
+	>>> add_integer(12, 3)
+	15
+
+	>>> add_integer(-12, 12)
+	0
+
+	>>> add_integer(12, -12)
+	0
+
+	>>> add_integer(-6, -6)
+	-12
+
+	>>> add_integer(30, "string")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(6.3, 6.2)
+	12
+
+	>>> add_integer(6.2, -6.3)
+	0
+
+	>>> add_integer(-6.3, 6.9)
+	0
+
+	>>> add_integer(-6.9, -6.2)
+	-12
+
+	>>> add_integer(6, 6.5)
+	12
+
+	>>> add_integer(12.2, 12)
+	24
+
+	>>> add_integer(-6.9, 6)
+	0
+
+	>>> add_integer(6, -6.5)
+	0
+
+	>>> add_integer(6.2, -6)
+	0
+
+	>>> add_integer(-6, 6.2)
+	0
+
+	>>> add_integer(-6, -6.5)
+	-12
+
+	>>> add_integer(10e+1000, 1)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(1, 10e+1000)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(1, (10e+1000 / 10e+1000))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+	>>> add_integer("string")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer("string", 6)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(6, "string")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(0, 1, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'

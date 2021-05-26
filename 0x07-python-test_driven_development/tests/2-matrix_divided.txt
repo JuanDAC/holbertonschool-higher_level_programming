@@ -1,0 +1,140 @@
+===============================
+ How to Use 0-add_integer.py
+===============================
+
+
+Using `add_integer(:int, :int)`
+
+	>>> import os
+
+	>>> file = '2-matrix_divided.py'
+
+	>>> function = __import__('2-matrix_divided').matrix_divided
+
+	>>> os.popen("pep8 " + file).read()
+	''
+
+	>>> os.access(file, os.X_OK)
+	True
+
+	>>> os.path.exists(os.getcwd() + '/README.md')
+	True
+
+	>>> len(file.__doc__) > 0
+	True
+
+	>>> len(function.__doc__) > 0
+	True
+
+	>>> os.popen('cat -e ' + file + ' | tail -1').read()[-1]
+	'\n'
+
+	>>> os.popen('cat ' + file + ' | head -1').read()
+	'#!/usr/bin/python3\n'
+
+	>>> function(1, 2)
+	3
+
+	>>> function(100, -2)
+	98
+
+	>>> function(-8)
+	90
+
+	>>> function(42.5, -2)
+	40
+
+	>>> function(12, 3)
+	15
+
+	>>> function(-12, 12)
+	0
+
+	>>> function(12, -12)
+	0
+
+	>>> function(-6, -6)
+	-12
+
+	>>> function(30, "string")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> function(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> function(6.3, 6.2)
+	12
+
+	>>> function(6.2, -6.3)
+	0
+
+	>>> function(-6.3, 6.9)
+	0
+
+	>>> function(-6.9, -6.2)
+	-12
+
+	>>> function(6, 6.5)
+	12
+
+	>>> function(12.2, 12)
+	24
+
+	>>> function(-6.9, 6)
+	0
+
+	>>> function(6, -6.5)
+	0
+
+	>>> function(6.2, -6)
+	0
+
+	>>> function(-6, 6.2)
+	0
+
+	>>> function(-6, -6.5)
+	-12
+
+	>>> function(10e+1000, 1)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> function(1, 10e+1000)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> function(1, (10e+1000 / 10e+1000))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+	>>> function("string")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> function("string", 6)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> function(6, "string")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> function(0, 1, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: function() takes from 1 to 2 positional arguments but 3 were given
+
+	>>> function()
+	Traceback (most recent call last):
+	...
+	TypeError: function() missing 1 required positional argument: 'a'
