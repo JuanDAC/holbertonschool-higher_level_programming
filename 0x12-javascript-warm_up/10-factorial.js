@@ -4,10 +4,11 @@ const { argv } = require('process');
 
 const number = parseInt(Number(argv[2]));
 
-const factorial = (number) => {
-  if (number === 1) {
+const factorial = number => {
+  if (number === 0) {
     return (1);
   }
+
   return (number * factorial(number - 1));
 };
 
