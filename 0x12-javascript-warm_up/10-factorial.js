@@ -1,9 +1,11 @@
 #!/urs/bin/node
+// Computes and prints the factorial of a given number.
 
 const { argv } = require('process');
 
 const number = parseInt(Number(argv[2]));
 
+// Define recursive factorial function.
 const factorial = number => {
   if (number === 0) {
     return (1);
