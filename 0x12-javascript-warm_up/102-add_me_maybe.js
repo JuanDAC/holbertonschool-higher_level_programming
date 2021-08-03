@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const callMeMoby = function (number, theFunction) {
+function callMeMoby (number, theFunction) {
   theFunction(number + 1);
-};
+}
 
 exports.callMeMoby = callMeMoby;

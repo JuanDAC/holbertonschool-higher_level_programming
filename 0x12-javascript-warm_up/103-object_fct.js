@@ -8,6 +8,7 @@ console.log(myObject);
 Object.setPrototypeOf(myObject, {
   incr: function () {
     this.value += 1;
+    this.incr = this.incr;
   }
 });
 
