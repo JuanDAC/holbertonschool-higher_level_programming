@@ -1,9 +1,7 @@
 #!/usr/bin/node
 
-function callMeMoby (x, theFunction) {
-  while (x-- >= 0) {
-    theFunction();
-  }
+const callMeMoby = function (x, theFunction) {
+  Array.apply([], Array(x)).forEach(() => theFunction());
 };
 
 exports.callMeMoby = callMeMoby;
