@@ -1,14 +1,10 @@
 #!/usr/bin/node
 
-const Rectangle = require('./4-rectangle');
+const Square5 = require('./5-square.js');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (c) {
-    const character = typeof c === 'undefined' ? 'X' : c;
+class Square extends Square5 {
+  charPrint (c = 'X') {
+    const character = c;
     const { width, height } = this;
     const shape = `${character.repeat(width)}\n`.repeat(height).slice(0, -1);
     console.log(shape);
