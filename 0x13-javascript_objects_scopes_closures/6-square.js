@@ -7,8 +7,8 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  charPrint (c = 'X') {
-    const character = c;
+  charPrint (c) {
+    const character = typeof c === 'undefined' ? 'X' : c;
     const { width, height } = this;
     const shape = `${character.repeat(width)}\n`.repeat(height).slice(0, -1);
     console.log(shape);
