@@ -4,7 +4,7 @@ Selects all states
 """
 import MySQLdb
 import sys
-run = __import__('run').Rectangle 
+run = __import__('run').run
 
 def handler_cursor(cursor):
     result = cursor.fetchall()
