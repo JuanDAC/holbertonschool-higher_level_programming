@@ -2,6 +2,7 @@
 """
 Run all states
 """
+import MySQLdb
 
 def run(argv, sql, handler_cursor, handler_error):
     db = MySQLdb.connect('localhost', argv[1], argv[2], argv[3])
