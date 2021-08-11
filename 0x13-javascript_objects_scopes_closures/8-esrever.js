@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
 exports.esrever = function (list) {
-  const newList = [];
-  list.forEach((value) => newList.shift(value));
-  return (newList);
+  if (list.length === 1) {
+    return ([list.pop()]);
+  }
+  return [list.pop()].concat(exports.esrever(list));
 };
