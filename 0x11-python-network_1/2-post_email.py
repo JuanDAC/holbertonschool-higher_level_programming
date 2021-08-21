@@ -10,4 +10,5 @@ from sys import argv
 if __name__ == "__main__":
     data = urlencode({"email": argv[2]}).encode('ascii')
     with urlopen(argv[1], data) as response:
-        print(response.data)
+        html = str(response.read())
+        print(html[2:-1])
