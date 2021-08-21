@@ -5,7 +5,6 @@ from urllib.request import urlopen
 from sys import argv
 
 if __name__ == "__main__":
-    url = argv[1]
-    with urlopen(url) as response:
+    with urlopen(argv[1]) as response:
         headers_like_dict = dict(response.getheaders())
-        print(headers_like_dict['X-Request-Id'])
+        print(headers_like_dict.get('X-Request-Id'))
