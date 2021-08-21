@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Python script that takes in a URL and prints header X-Request-Id
+"""
+Python script that takes in a URL and prints header X-Request-Id
+"""
 
 from urllib.request import urlopen
 from sys import argv
