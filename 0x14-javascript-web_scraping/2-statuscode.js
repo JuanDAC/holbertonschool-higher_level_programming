@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-const { get: GET } = require('request');
+const { get } = require('request');
 const { argv } = require('process');
 const url = argv[2];
 
-GET(url, (err, { statusCode }, body) => {
+get(url, (err, { statusCode }, body) => {
   if (err) {
     return (console.log(err));
   }
