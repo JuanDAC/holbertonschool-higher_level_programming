@@ -13,5 +13,5 @@ get(url, (err, res, data) => {
   const count = [0, ...results]
     .reduce((prevr, { characters }) => prevr + [0, ...characters]
       .reduce((prevc, character) => prevc + character.includes('18')));
-  console.log(count);
+  console.log(isNaN(count) ? 0 : count);
 });
