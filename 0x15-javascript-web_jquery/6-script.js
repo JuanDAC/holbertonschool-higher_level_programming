@@ -1,12 +1,11 @@
-const clickMe = document.querySelector('DIV#add_item');
-const listToAdd = document.querySelector('UL.my_list');
+const clickMe = document.querySelector('DIV#update_header');
+const header = document.querySelector('header');
 
 clickMe?.addEventListener('click', () => {
-  const newLi = document.createElement('LI');
-  const textNode = document.createTextNode('Item');
-  if (newLi && listToAdd && textNode) {
-    newLi.appendChild(textNode);
-    listToAdd.appendChild(newLi);
+  const textNode = document.createTextNode('New Header!!!');
+  if (header && textNode) {
+    [...header.childNodes].pop()?.remove()
+    header.appendChild(textNode);
   }
 });
 
