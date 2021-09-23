@@ -4,8 +4,7 @@ const header = document.querySelector('header');
 clickMe?.addEventListener('click', () => {
   const textNode = document.createTextNode('New Header!!!');
   if (header && textNode) {
-    [...header.childNodes].pop()?.remove()
+    [...header.childNodes].pop()?.remove();
     header.appendChild(textNode);
   }
 });
-

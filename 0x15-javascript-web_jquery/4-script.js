@@ -5,4 +5,3 @@ clickMe?.addEventListener('click', () => {
   header?.classList?.toggle('green');
   header?.classList?.toggle('red');
 });
-

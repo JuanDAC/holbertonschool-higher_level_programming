@@ -7,4 +7,3 @@ fetch(url)
     const textNode = document.createTextNode(name);
     character.appendChild(textNode);
   });
-

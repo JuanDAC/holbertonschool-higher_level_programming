@@ -6,12 +6,12 @@ const addHello = (hello) => {
   if (helloDiv && textNode) {
     helloDiv.appendChild(textNode);
   }
-}
+};
 
 fetch(url)
   .then((dataRaw) => dataRaw.json())
   .then(({ hello }) => {
-    if(document.readyState === 'ready' || document.readyState === 'complete') {
+    if (document.readyState === 'ready' || document.readyState === 'complete') {
       addHello(hello);
     } else {
       window.onload = () => addHello(hello);

@@ -9,4 +9,3 @@ clickMe?.addEventListener('click', () => {
     listToAdd.appendChild(newLi);
   }
 });
-
